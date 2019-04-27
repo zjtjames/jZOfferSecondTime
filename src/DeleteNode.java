@@ -33,8 +33,7 @@ public class DeleteNode {
             while (node.next != toBeDeleted) {
                 node = node.next;
             }
-//            node.next
+            node.next = null;
         }
-
     }
 }
