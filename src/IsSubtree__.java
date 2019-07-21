@@ -31,7 +31,7 @@ public class IsSubtree__ {
 
     private boolean isSame(TreeNode x, TreeNode y) {
         if(x == null && y == null) return true;
-        if(x == null || y == null) return false; // 这一行可以判断出示例的那种情况 2的左儿子是0和null
+        if(x == null || y == null) return false; // x和y没有同时遍历完 说明不是子树
         return x.val == y.val && isSame(x.left, y.left) && isSame(x.right, y.right);
     }
 }

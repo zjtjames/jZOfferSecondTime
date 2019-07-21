@@ -31,7 +31,7 @@ public class IsSubStructure__ {
     }
     public boolean isSame(TreeNode x,TreeNode y) {
         if(y == null) return true;
-        if(x == null) return false;
+        if(x == null) return false; // y还没遍历完 x就完了 说明不是子结构
         return x.val == y.val && isSame(x.left,y.left) && isSame(x.right,y.right);
     }
 }
