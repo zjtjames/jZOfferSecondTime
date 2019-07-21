@@ -29,9 +29,9 @@ public class IsSubStructure__ {
         if(root1 == null || root2 == null) return false;
         return isSame(root1,root2) || isSubStructure(root1.left,root2) || isSubStructure(root1.right,root2);
     }
-    public boolean isSame(TreeNode root1,TreeNode root2) {
-        if(root2 == null) return true;
-        if(root1 == null) return false;
-        return root1.val == root2.val && isSame(root1.left,root2.left) && isSame(root1.right,root2.right);
+    public boolean isSame(TreeNode x,TreeNode y) {
+        if(y == null) return true;
+        if(x == null) return false;
+        return x.val == y.val && isSame(x.left,y.left) && isSame(x.right,y.right);
     }
 }
